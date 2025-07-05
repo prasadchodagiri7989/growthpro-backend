@@ -1,4 +1,3 @@
-// data/headlines.js
 const headlines = [
   "Why Cake & Co is Mumbai's Sweetest Spot in 2025",
   "How Cake & Co is Revolutionizing Desserts in Mumbai",

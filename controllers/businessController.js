@@ -1,4 +1,3 @@
-// controllers/businessController.js
 const generateHeadline = require('../utils/generateHeadline');
 
 exports.getBusinessData = (req, res) => {
