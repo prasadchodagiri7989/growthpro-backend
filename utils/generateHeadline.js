@@ -1,0 +1,74 @@
+// utils/generateHeadline.js
+const headlines = [
+  "Why Cake & Co is Mumbai's Sweetest Spot in 2025",
+  "How Cake & Co is Revolutionizing Desserts in Mumbai",
+  "Cake & Co: Mumbai's Favorite Bakery Destination",
+  "Uncover Mumbai’s Best-Kept Dessert Secret – Cake & Co",
+  "The Taste of Mumbai: Cake & Co's Success Story",
+  "How Cake & Co is Changing the Way Mumbai Eats Cake",
+  "Mumbai Locals Can’t Get Enough of Cake & Co!",
+  "Cake & Co’s Rise to Fame in the Heart of Mumbai",
+  "Sweet Dreams Are Made of Cake & Co in Mumbai",
+  "Discover the Secret Behind Cake & Co's Mumbai Magic",
+  "From Local to Legendary: Cake & Co in Mumbai",
+  "Cake & Co Sets a New Dessert Standard in Mumbai",
+  "Mumbai’s Dessert Scene Transformed by Cake & Co",
+  "Inside Cake & Co: The Dessert Revolution in Mumbai",
+  "Why Food Bloggers Love Cake & Co in Mumbai",
+  "How Cake & Co Became a Household Name in Mumbai",
+  "Taste the Future of Baking at Cake & Co, Mumbai",
+  "Mumbai’s Favorite Dessert Brand? It’s Cake & Co!",
+  "5 Reasons Mumbai Chooses Cake & Co Every Time",
+  "Cake & Co is Sweetening Up Mumbai’s Foodie Scene",
+  "Mumbai’s Hidden Gem: The Story of Cake & Co",
+  "Where Tradition Meets Taste: Cake & Co, Mumbai",
+  "Why Families in Mumbai Trust Cake & Co",
+  "Cake & Co is More Than Cake — It’s a Mumbai Icon",
+  "Elevate Your Taste Buds at Cake & Co, Mumbai",
+  "The Delicious Legacy of Cake & Co in Mumbai",
+  "Mumbai’s Most Instagrammable Bakery: Cake & Co",
+  "What Makes Cake & Co a Top Pick in Mumbai",
+  "Celebrating Moments with Cake & Co in Mumbai",
+  "Behind the Scenes of Cake & Co’s Mumbai Kitchen",
+  "Cake & Co: A Flavor Explosion in Mumbai",
+  "The Dessert Destination Everyone in Mumbai Talks About",
+  "Love at First Bite: Cake & Co’s Journey in Mumbai",
+  "Why Cake & Co is the Top-Rated Spot in Mumbai",
+  "Mumbai’s Best Birthday Cakes Start at Cake & Co",
+  "The Innovation That Drives Cake & Co in Mumbai",
+  "Mumbai’s Sweetest Success Story: Cake & Co",
+  "How Cake & Co Wins Hearts Daily in Mumbai",
+  "Cake & Co's Craftsmanship Defines Mumbai’s Bakery Scene",
+  "The Power of Flavor: Cake & Co in Mumbai",
+  "What Mumbai Says About Cake & Co Might Surprise You",
+  "Cake & Co Brings Sweet Joy to Mumbai Streets",
+  "Experience Premium Baking at Cake & Co in Mumbai",
+  "Mumbai’s Dessert Trends Start at Cake & Co",
+  "The Bakery That Built a Community: Cake & Co, Mumbai",
+  "Taste Mumbai’s Best Cupcakes at Cake & Co",
+  "Cake & Co is the Heartbeat of Mumbai’s Sweet Tooth",
+  "Why Every Celebration in Mumbai Needs Cake & Co",
+  "Cake & Co Makes Every Day Sweeter in Mumbai",
+  "From Start-Up to Star: The Cake & Co Mumbai Journey"
+];
+
+
+const capitalizeWords = (text) => {
+  return text
+    .toLowerCase()
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
+const generateHeadline = (name, location) => {
+  const random = Math.floor(Math.random() * headlines.length);
+  const capitalizedName = capitalizeWords(name);
+  const capitalizedLocation = capitalizeWords(location);
+
+  return headlines[random]
+    .replace(/Cake & Co/g, capitalizedName)
+    .replace(/Mumbai/g, capitalizedLocation);
+};
+
+module.exports = generateHeadline;
